@@ -1,0 +1,3 @@
+class Piao extends Peca{
+    
+}
