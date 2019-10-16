@@ -34,7 +34,7 @@ class Chess{
             System.out.print("#");
             for(int j = 0;j < 8; j++){
                 if(tabuleiro[i][j] == 0){
-                    System.out.print("[ ]");
+                    System.out.print("["+ localPeca() +"]");
                 }else{
                     System.out.print("   ");
                 }
@@ -47,6 +47,11 @@ class Chess{
                 }
                 System.out.println();
             }
+        }
+    }
+    public localPeca(){
+        for(Peca x : peca){
+            if(x e)
         }
     }
 }
