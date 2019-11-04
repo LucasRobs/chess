@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.awt.Color;
 class Chess{
-    private ArrayList<Peca> peca = new ArrayList<Peca>(32);
+    private ArrayList<Peca> pecca = new ArrayList<Peca>(32);
     private int tabuleiro[][] = new int[8][8];
     
     public void novoTabuleiro(){
@@ -23,6 +22,18 @@ class Chess{
             }
         }
     }
+    
+    public void criarPessas(){
+        for(int i = 0; i < 32; i++){
+            if(i < 8){
+                Piao x = new Piao();
+                x.setPosicao(1,i);
+                pecca.add(x);
+                x.setPosicao(6,i);
+                pecca.add(x);
+            }
+        }
+    }
     public void mostrarTabuleiro(){
         for(int i = 0; i < 8; i++){
             if(i == 0){
@@ -34,7 +45,7 @@ class Chess{
             System.out.print("#");
             for(int j = 0;j < 8; j++){
                 if(tabuleiro[i][j] == 0){
-                    System.out.print("["+ localPeca() +"]");
+                    System.out.print("["+ peca(j).getPeca() + "]");
                 }else{
                     System.out.print("   ");
                 }
@@ -49,9 +60,8 @@ class Chess{
             }
         }
     }
-    public localPeca(){
-        for(Peca x : peca){
-            if(x e)
-        }
-    }
+    /*
+    public char localPecca(int x, int y){
+        for()
+    }*/
 }
