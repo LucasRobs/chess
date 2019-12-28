@@ -1,9 +1,14 @@
 class Peca{
-    String peca;
-    String cor;
-    int x;
-    int y;
-
+    private String peca;
+    private String cor;
+    private int x;
+    private int y;
+    public void criar(String in_peca, String in_cor, int in_x, int in_y){
+        this.peca = in_peca;
+        this.cor = in_cor;
+        this.x = in_x;
+        this.y = in_y;
+    }
     public String getPeca() {
         return this.peca;
     }
@@ -20,9 +25,11 @@ class Peca{
         return this.y;
     }
 
-    void setPosicao(int x, int y){
+    public void setPosicao(int x, int y){
         this.x = x;
         this.y = y;
     }
-
+    public void setPeca(String x){
+        this.peca = x;
+    }
 }
